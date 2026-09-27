@@ -75,6 +75,32 @@ function renderProjects(){const list=projects.filter(p=>projectFilter==='All'||p
 document.querySelectorAll('[data-project-filter]').forEach(button=>button.addEventListener('click',()=>{document.querySelector('[data-project-filter].active').classList.remove('active');button.classList.add('active');projectFilter=button.dataset.projectFilter;renderProjects()}));renderProjects();
 document.querySelector('#timeline').innerHTML=experience.map(x=>`<article class="timeline-item reveal"><time>${x[0]}</time><div><h3>${x[1]}</h3><strong>${x[2]}</strong></div><p>${x[3]}</p><div class="evidence-links"><a href="${x[4]}" target="_blank" rel="noreferrer">View work ↗</a></div></article>`).join('');
 
+/* Additional certificates copied from the certificate archive. */
+credentials.push(
+  "Competitions/Talent Quest Fest 2.0/Ludo Single Competition Certificate.jpeg",
+  "Internships/Decode Labs/DecodeLabs Internship_Certificate.pdf",
+  "Online Courses/IBM_SkillsBuild/AI in the Real World.png",
+  "Online Courses/IBM_SkillsBuild/Bringing Websites to Life with JavaScript.png",
+  "Online Courses/IBM_SkillsBuild/Develop an Interactive Task List Web Page.png",
+  "Online Courses/IBM_SkillsBuild/Developing Sites for the Web.png",
+  "Online Courses/IBM_SkillsBuild/Learn JavaScript.png",
+  "Online Courses/IBM_SkillsBuild/Troubleshoot Your Code Using IBM Bob.png",
+  "Online Courses/IBM_SkillsBuild/Web Development Basics.png",
+  "Online Courses/IBM_SkillsBuild/Web Development Fundamentals.png",
+  "Online Courses/IBM_SkillsBuild/Website Testing and Deployment.png",
+  "Online Courses/IBM_SkillsBuild/Writing Effective Learning Objectives with AI.png",
+  "Online Courses/IBM_SkillsBuild/Your Future in Web Development The Job Landscape.png",
+  "Online Courses/Microsoft Learn/Explore the business value of Generative AI.png",
+  "Online Courses/Microsoft Learn/Welcome to Dragon Copilot (physicians) learn to train.png",
+  "Online Courses/UMT Connected/21st Century Skills (SD-102) – Certificate of Achievement.pdf",
+  "Workshops/Simplilearn/Beyond_Simple_Agents_Build_an_AI_Automation_Pipeline_Certificate.pdf",
+  "Workshops/Simplilearn/Build with OpenClaw Automations to Run.pdf",
+  "Workshops/Skill Sprint/Find the Right Opportunities.pdf",
+  "Workshops/Skill Sprint/Tech For Your Career.pdf",
+  "Workshops/Skill Sprint/Your Digital Presence.pdf",
+  "Workshops/Skill Sprint/Your story on paper.pdf"
+);
+
 /* Filter and progressively reveal credentials so the long archive stays scannable. */
 let active='All',shown=12;
 function niceName(path){return path.split('/').pop().replace(/\.(pdf|png|jpeg|jpg)$/i,'').replaceAll('_',' ').replace(/\s+/g,' ').trim()}
