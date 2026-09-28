@@ -101,6 +101,15 @@ credentials.push(
   "Workshops/Skill Sprint/Your story on paper.pdf"
 );
 
+/* New certificates added from the latest archive sync. */
+credentials.push(
+  "Workshops/UMT/Tarbiyah Department/Agency in Action - Training Workshop Certificate.png",
+  "Workshops/CODELOGIX Solutions/LinkedIn Optimization with AI Workshop.png",
+  "Workshops/DecaTrace/Digital Forensics with Autopsy - Workshop Certificate.jpeg",
+  "Workshops/PRIDE/The Art of Narrative Review Writing - Workshop Certificate.jpeg",
+  "Workshops/Simplilearn/Build with Claude - Productivity Shortcuts to a 5-Hour Workday.pdf"
+);
+
 /* Filter and progressively reveal credentials so the long archive stays scannable. */
 let active='All',shown=12;
 function niceName(path){return path.split('/').pop().replace(/\.(pdf|png|jpeg|jpg)$/i,'').replaceAll('_',' ').replace(/\s+/g,' ').trim()}
